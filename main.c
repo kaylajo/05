@@ -1,14 +1,19 @@
 #include <stdio.h>
-int main(void){
-    int num;
+int main(void)
+{
+    int c;
+    int count = 0;
 
-    printf("정수 하나를 입력하시오 : ");
-    scanf("%d", &num);
+    printf("input a string: ");
 
-    if (num < 0)
-    num = -num;
-    
-    printf("절대값은 %d 입니다.\n", num);
-    
+    while ((c = getchar()) != '\n')
+    { 
+        if (c >= '0' && c <= '9')
+        count++;
+    }
+
+    printf("the number of digits is %d\n", count);
+
     return 0;
+
 }
