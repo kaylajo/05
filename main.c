@@ -1,18 +1,32 @@
 #include <stdio.h>
 int main(void)
 {
-    int n;
-    int sum = 0;
+    int a, b;
+    char op;
 
-    printf("input a number: ");
-    scanf("%d", &n);
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &a, &op, &b);
 
-    for (int i = 1; i <= n; i++)
+    if (op == '+')
     {
-        sum += i;
+        printf("%d + %d = %d\n", a, b, a + b);
     }
-
-    printf("The result is %d\n", sum);
+    else if (op == '-')
+    {
+        printf("%d - %d = %d\n", a, b, a - b);
+    }
+    else if (op == '*')
+    {
+        printf("%d * %d = %d\n", a, b, a * b);
+    }
+    else if (op == '/')
+    {
+        printf("%d / %d = %d\n", a, b, a / b);
+    }
+    else
+    {
+        printf("Invalid operator\n");
+    }
 
     return 0;
 }
